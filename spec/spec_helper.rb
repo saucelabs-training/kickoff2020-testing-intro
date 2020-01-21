@@ -5,13 +5,15 @@ RSpec.configure do |config|
     test_name = example.full_description
     build_name = "Kickoff Execution: #{ENV['SAUCE_START_TIME'] || Time.now.to_i}"
 
-    # Update this:
+    # 1. Copy username & access key from `sauce_options.rb`
     sauce_username = "<SAUCE_USERNAME>"
     sauce_access_key = "<SAUCE_ACCESS_KEY>"
     sauce_url = "https://" + sauce_username + ":" + sauce_access_key + "@ondemand.saucelabs.com:443/wd/hub"
 
-    sauce_info = {}
+    # 2. Copy options from `sauce_options.rb`
+    sauce_options = {}
 
+    # 2. Copy capabilities info from `sauce_options.rb`
     capabilities = {}
 
     @driver = Selenium::WebDriver.for :remote,

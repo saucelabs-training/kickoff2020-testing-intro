@@ -18,17 +18,17 @@
 ### Adding Sauce Labs Settings
 
 1. Look at the [Test Configuration Options](https://docs.saucelabs.com/reference/test-configuration/) for setting Sauce Labs specific values
-2. Open `sauce_info.rb` file
+2. Open `sauce_options.rb` file
 3. Add a test name and build name (`name` and `build` respectively)
 4. Set `extendedDebugging: true` and `capturePerformance: true`
 5. Add code to report results to Sauce Labs
-6. In the terminal, run: `ruby sauce_info.rb`
+6. In the terminal, run: `ruby sauce_options.rb`
 7. [Look at the job on the Dashboard](https://app.saucelabs.com/dashboard/tests)
 
 ### Running Real Tests
 
 1. Open `spec/spec_helper.rb` file
-2. Copy the setup code you used in `sauce_info.rb` into the "before" hook
+2. Copy the setup code you used in `sauce_options.rb` into the "before" hook
 3. Navigate to https://www.saucedemo.com/
 4. Get the element information for username field, password field, and login button
 5. Open `spec/passing_test_spec.rb` file
