@@ -3,7 +3,9 @@ require 'selenium-webdriver'
 RSpec.configure do |config|
   config.before do |example|
     test_name = example.full_description
+    build_name = "Kickoff Execution: #{ENV['SAUCE_START_TIME'] || Time.now.to_i}"
 
+    # Update this:
     sauce_username = "<SAUCE_USERNAME>"
     sauce_access_key = "<SAUCE_ACCESS_KEY>"
     sauce_url = "https://" + sauce_username + ":" + sauce_access_key + "@ondemand.saucelabs.com:443/wd/hub"

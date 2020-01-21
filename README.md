@@ -4,7 +4,7 @@
 
 1. [Sign up for a Sauce Labs Account](https://saucelabs.com/sign-up)
 2. [Sign up for a Github account](https://github.com/join)
-3. [Open the Gitpod](https://gitpod.io/#https://github.com/sauce-examples/ruby-example)
+3. [Open the Gitpod](https://gitpod.io/#https://github.com/saucelabs-training/kickoff2020-testing-intro)
 4. Sign in to Github if necessary to access Gitpod
 5. Open `open_browser.rb` file
 6. Locate your [Sauce Labs Credentials](https://app.saucelabs.com/user-settings)
