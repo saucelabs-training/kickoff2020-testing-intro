@@ -1,40 +1,38 @@
 # Example Automated Test with Sauce Labs
 
-### Executing a Job on Sauce Labs
+### Setting Up a Dev Environment
 
-1. [Sign up for a Sauce Labs Account](https://saucelabs.com/sign-up)
-2. [Sign up for a Github account](https://github.com/join)
-3. [Open the Gitpod](https://gitpod.io/#https://github.com/saucelabs-training/kickoff2020-testing-intro)
-4. Sign in to Github if necessary to access Gitpod
-5. Open `open_browser.rb` file
-6. Locate your [Sauce Labs Credentials](https://app.saucelabs.com/user-settings)
-7. Paste the credentials where it says "<SAUCE_USERNAME>" and "<SAUCE_ACCESS_KEY>"
-8. Use the [Platform Configurator](https://wiki.saucelabs.com/display/DOCS/Platform+Configurator#/) to create your desired combination
+2. [Sign up for a Github account](https://github.com/join){:target="_blank"}
+3. [Open the Gitpod](https://gitpod.io/#https://github.com/saucelabs-training/kickoff2020-testing-intro){:target="_blank"}
+4. Sign in to Github & Authorize Gitpod
+5. In the File Drop down, select "Auto-Save"
+6. Open `sauce_example.rb` file
+
+### Starting and Stopping a Sauce Session
+
+1. [Sign up for a Trial Sauce Labs Account](https://saucelabs.com/sign-up){:target="_blank"} if you don't have one already
+6. Locate your [Sauce Labs Credentials](https://app.saucelabs.com/user-settings){:target="_blank"}
+7. Paste the credentials where it says "yourusername" and "00000000-0000-0000-0000-000000000000"
+8. Use the [Platform Configurator](https://wiki.saucelabs.com/display/DOCS/Platform+Configurator#/){:target="_blank"}
+ to create your desired combination
+    * W3C
+    * PC
+    * Windows 10
+    * Chrome 78
+    * Advanced Configuration --> 1024x768
 9. Click the "Ruby" tab at the bottom of the page
-10. Copy/Paste the "capabilities" code over the `capabilities: {}` line
-11. In the terminal at the bottom, type: `ruby open_browser.rb` and hit enter
-12. [Look at the job on the Dashboard](https://app.saucelabs.com/dashboard/tests)
+10. Copy/Paste the "capabilities" code over the `capabilities` line
+11. In the terminal at the bottom, type: `ruby sauce_example.rb` and hit enter
+12. [Look at the job on the Dashboard](https://app.saucelabs.com/dashboard/tests){:target="_blank"}
 
-### Adding Sauce Labs Settings
+### Adding Sauce Labs Options
 
-1. Look at the [Test Configuration Options](https://docs.saucelabs.com/reference/test-configuration/) for setting Sauce Labs specific values
-2. Open `sauce_options.rb` file
-3. Add a test name and build name (`name` and `build` respectively)
-4. Set `extendedDebugging: true` and `capturePerformance: true`
-5. Add code to report results to Sauce Labs
-6. In the terminal, run: `ruby sauce_options.rb`
-7. [Look at the job on the Dashboard](https://app.saucelabs.com/dashboard/tests)
-
-### Running Real Tests
-
-1. Open `spec/spec_helper.rb` file
-2. Copy the setup code you used in `sauce_options.rb` into the "before" hook
-3. Navigate to https://www.saucedemo.com/
-4. Get the element information for username field, password field, and login button
-5. Open `spec/passing_test_spec.rb` file
-6. Write the selenium code for logging in with `standard_user`
-7. Add code to verify resulting URL is correct
-8. Open `spec/failing_test_spec.rb` file
-9. Copy the code from `spec/passing_test_spec.rb` but changed the user name to `locked_out_user`
-10. In the terminal, run `bundle exec rake`
-11. [Look at the tests on the Dashboard](https://app.saucelabs.com/dashboard/tests)
+1. Look at the [Test Configuration Options](https://docs.saucelabs.com/reference/test-configuration/){:target="_blank"}
+2. Scroll down to the very bottom
+3. In the far right column of the last row, copy extendedDebugging information
+4. In the `sauce_example.rb` file, after the `1024x768`, hit "enter" and paste the extendedDebugging line
+5. Uncomment the test and build information
+6. Copy those 3 lines; Click right after "true" after extendedDebugging line and paste 
+5. Uncomment the code for finding elements and submitting results
+6. In the terminal, run: `ruby sauce_example.rb`
+7. [Look at the job on the Dashboard](https://app.saucelabs.com/dashboard/tests){:target="_blank"}
