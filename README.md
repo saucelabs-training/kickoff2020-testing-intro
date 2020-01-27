@@ -30,11 +30,11 @@ to create your desired combination (for example select the following)
 
 1. Go to the <a href="https://docs.saucelabs.com/reference/test-configuration/" target="_blank">Test Configuration Options page</a>
 2. Scroll down to the very bottom
-3. In the far right column of the last row, copy the `"extendedDebugging": true` information
+3. In the far right column of the second to last row, copy the `"extendedDebugging": true` information
 4. In Gitpod, after the `1024x768,`, hit "enter" and paste the extended debugging text
-5. type a comma after the extended debugging line and hit enter
+5. type a comma after the extended debugging text and hit enter
 6. Uncomment the name and build lines of code by deleting the pound (`#`) sign at the beginning
-7. Copy those 2 lines; and paste in the capabilities code above.
+7. Copy those 2 lines and paste them into the capabilities code
 8. Uncomment the rest of the code at the bottom for finding elements and submitting results
-9. In the terminal, run: `ruby sauce_example.rb`
+9. In the terminal, type: `ruby sauce_example.rb` and hit enter
 10. <a href="https://app.saucelabs.com/dashboard/tests" target="_blank">Look at the Dashboard to see the job running</a>
